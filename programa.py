@@ -1,4 +1,7 @@
-import boto3
-client = boto3.client("s3" , "us-east-1")
-response = client.list:buckets()
-print(response)
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
